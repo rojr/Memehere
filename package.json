@@ -1,0 +1,18 @@
+{
+  "name": "memehere",
+  "version": "0.0.1",
+  "description": "Quick way to find memes right here right now",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "meme"
+  ],
+  "author": "rojr",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "electron": "^2.0.0"
+  }
+}
