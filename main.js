@@ -1,4 +1,4 @@
-const electron = require('electron')
+ const electron = require('electron')
 // Module to control application life.
 const app = electron.app
 // Module to create native browser window.
@@ -7,9 +7,22 @@ const BrowserWindow = electron.BrowserWindow
 const path = require('path')
 const url = require('url')
 
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
+
+const ioHook = require('iohook');
+
+const id = ioHook.registerShortcut([56, 50], (keys) => {
+  mainWindow.show();
+});
+
+// Register and start hook
+ioHook.start();
+
+// Alternatively, pass true to start in DEBUG mode.
+ioHook.start(true);
 
 function createWindow () {
   // Create the browser window.
@@ -31,11 +44,12 @@ function createWindow () {
   // mainWindow.webContents.openDevTools()
 
   // Emitted when the window is closed.
-  mainWindow.on('closed', function () {
+  mainWindow.on('close', function (event) {
     // Dereference the window object, usually you would store windows
     // in an array if your app supports multi windows, this is the time
     // when you should delete the corresponding element.
-    mainWindow = null
+    event.preventDefault(); //this prevents it from closing. The `closed` event will not fire now
+    mainWindow.hide();
   })
 }
 
@@ -46,8 +60,6 @@ app.on('ready', createWindow)
 
 // Quit when all windows are closed.
 app.on('window-all-closed', function () {
-  // On OS X it is common for applications and their menu bar
-  // to stay active until the user quits explicitly with Cmd + Q
   if (process.platform !== 'darwin') {
     app.quit()
   }
