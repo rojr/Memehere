@@ -21,16 +21,14 @@ const id = ioHook.registerShortcut([56, 50], (keys) => {
 // Register and start hook
 ioHook.start();
 
-// Alternatively, pass true to start in DEBUG mode.
-ioHook.start(true);
-
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow(
     {
       width: 800,
-      height: 112,
-      frame:false
+      height: 144,
+      frame:false,
+      resizeable:false
      })
 
   // and load the index.html of the app.
@@ -60,6 +58,7 @@ app.on('ready', createWindow)
 
 // Quit when all windows are closed.
 app.on('window-all-closed', function () {
+  ioHook.stop();
   if (process.platform !== 'darwin') {
     app.quit()
   }

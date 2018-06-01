@@ -3,104 +3,19 @@
   <head>
     <meta charset="UTF-8">
     <title>Hello World!</title>
-    <style>
-      
-      body { 
-        padding:16px;
-        margin:0;
-        overflow-y:hidden;
-        
-        max-width: 100%;
-      }
-      #main-search-input {
-        margin: 0;
-        padding:0;
-        border: 1px solid black;
-        width: 100%;
-        font-size: 45px;
-        height: 80px;
-        margin-bottom: 16px;
-      }
-      
-      #search-result-box {
-        display: flex; 
-        max-width: 100%;
-        justify-content: flex-end;
-        flex-flow: row-reverse;
-        flex-wrap: wrap;
-        max-height: 600px;
-        overflow-y: auto;
-      }
-      
-      #search-result-box > div {
-        height:100px;
-        width: auto;
-        margin-right: 8px;
-        margin-bottom: 8px;
-      }
-      
-      #search-result-box > div img{
-        height: 100%;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style/stylish.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
   </head>
   <body>
     <input type="text" id="main-search-input"/>
-    <div id="search-result-box">
-      
-    <div><img src="https://media1.giphy.com/media/xT9IgG50Fb7Mi0prBC/giphy-preview.gif"></div><div><img src="https://media0.giphy.com/media/brsEO1JayBVja/giphy-preview.gif"></div><div><img src="https://media2.giphy.com/media/IThjAlJnD9WNO/giphy-preview.gif"></div><div><img src="https://media1.giphy.com/media/yoJC2A59OCZHs1LXvW/giphy-preview.gif"></div><div><img src="https://media0.giphy.com/media/Wj7lNjMNDxSmc/giphy-preview.gif"></div><div><img src="https://media3.giphy.com/media/l46CjoMYO5n2hQnWE/giphy-preview.gif"></div><div><img src="https://media3.giphy.com/media/12MWTDpnzvFbSU/giphy-preview.gif"></div><div><img src="https://media2.giphy.com/media/3lV7Hbo9iJRS0/giphy-preview.gif"></div><div><img src="https://media3.giphy.com/media/l2SqdQJImBlkPap68/giphy-preview.gif"></div><div><img src="https://media0.giphy.com/media/euAnOkLGWtdHG/giphy-preview.gif"></div><div><img src="https://media2.giphy.com/media/26BkNnO2qmCWTQuac/giphy-preview.gif"></div><div><img src="https://media0.giphy.com/media/Umb1ju55UMAIE/giphy-preview.gif"></div><div><img src="https://media3.giphy.com/media/3oEdv7ws9f1M7mgdyg/giphy-preview.gif"></div><div><img src="https://media1.giphy.com/media/26xBtJEKsPD5zo1Ne/giphy-preview.gif"></div><div><img src="https://media0.giphy.com/media/UQaRUOLveyjNC/giphy-preview.gif"></div><div><img src="https://media3.giphy.com/media/cS83sLRzgVOeY/giphy-preview.gif"></div><div><img src="https://media0.giphy.com/media/pcwaLYOQb3xN6/giphy-preview.gif"></div><div><img src="https://media0.giphy.com/media/13TXV4kfn7r2iA/giphy-preview.gif"></div><div><img src="https://media0.giphy.com/media/FBeSx3itXlUQw/giphy-preview.gif"></div><div><img src="https://media0.giphy.com/media/3oz8xSjBmD1ZyELqW4/giphy-preview.gif"></div><div><img src="https://media2.giphy.com/media/H7JD0pfyksePe/giphy-preview.gif"></div><div><img src="https://media1.giphy.com/media/VUC9YdLSnKuJy/giphy-preview.gif"></div><div><img src="https://media2.giphy.com/media/2f7RQiiWMJc40/giphy-preview.gif"></div><div><img src="https://media3.giphy.com/media/3oriNScTbEzEVoR1Is/giphy-preview.gif"></div><div><img src="https://media0.giphy.com/media/xTk9ZY0C9ZWM2NgmCA/giphy-preview.gif"></div></div>
+    <div class="c-image-container">
+      <div id="search-result-box">
+
+        <div><img src="https://media1.giphy.com/media/xT9IgG50Fb7Mi0prBC/giphy-preview.gif"></div><div><img src="https://media0.giphy.com/media/brsEO1JayBVja/giphy-preview.gif"></div><div><img src="https://media2.giphy.com/media/IThjAlJnD9WNO/giphy-preview.gif"></div><div><img src="https://media1.giphy.com/media/yoJC2A59OCZHs1LXvW/giphy-preview.gif"></div><div><img src="https://media0.giphy.com/media/Wj7lNjMNDxSmc/giphy-preview.gif"></div><div><img src="https://media3.giphy.com/media/l46CjoMYO5n2hQnWE/giphy-preview.gif"></div><div><img src="https://media3.giphy.com/media/12MWTDpnzvFbSU/giphy-preview.gif"></div><div><img src="https://media2.giphy.com/media/3lV7Hbo9iJRS0/giphy-preview.gif"></div><div><img src="https://media3.giphy.com/media/l2SqdQJImBlkPap68/giphy-preview.gif"></div><div><img src="https://media0.giphy.com/media/euAnOkLGWtdHG/giphy-preview.gif"></div><div><img src="https://media2.giphy.com/media/26BkNnO2qmCWTQuac/giphy-preview.gif"></div><div><img src="https://media0.giphy.com/media/Umb1ju55UMAIE/giphy-preview.gif"></div><div><img src="https://media3.giphy.com/media/3oEdv7ws9f1M7mgdyg/giphy-preview.gif"></div><div><img src="https://media1.giphy.com/media/26xBtJEKsPD5zo1Ne/giphy-preview.gif"></div><div><img src="https://media0.giphy.com/media/UQaRUOLveyjNC/giphy-preview.gif"></div><div><img src="https://media3.giphy.com/media/cS83sLRzgVOeY/giphy-preview.gif"></div><div><img src="https://media0.giphy.com/media/pcwaLYOQb3xN6/giphy-preview.gif"></div><div><img src="https://media0.giphy.com/media/13TXV4kfn7r2iA/giphy-preview.gif"></div><div><img src="https://media0.giphy.com/media/FBeSx3itXlUQw/giphy-preview.gif"></div><div><img src="https://media0.giphy.com/media/3oz8xSjBmD1ZyELqW4/giphy-preview.gif"></div><div><img src="https://media2.giphy.com/media/H7JD0pfyksePe/giphy-preview.gif"></div><div><img src="https://media1.giphy.com/media/VUC9YdLSnKuJy/giphy-preview.gif"></div><div><img src="https://media2.giphy.com/media/2f7RQiiWMJc40/giphy-preview.gif"></div><div><img src="https://media3.giphy.com/media/3oriNScTbEzEVoR1Is/giphy-preview.gif"></div><div><img src="https://media0.giphy.com/media/xTk9ZY0C9ZWM2NgmCA/giphy-preview.gif"></div></div>
+      </div>
+    </div>
     <script>
-      // You can also require other file
-      let { remote } = require('electron')
-let win = remote.getCurrentWindow()
-let searchInput = document.querySelector("#main-search-input");
-
-searchInput.onkeyup = function() {
-  if (this.value != "" ) {
-    win.setSize(win.getBounds().width, 712);
-    search(this.value);
-  } else {
-    win.setSize(win.getBounds().width, 112);
-  }
-}
-
-var searchTimeout = null;
-var searchResults = document.querySelector('#search-result-box');
-
-function search(query) {
-  if (searchTimeout != null) {
-    clearTimeout(searchTimeout);
-    searchTimeout = null;
-  }
-  
-  searchResults.innerHTML = '';
-  
-  searchTimeout = setTimeout(function() {
-    var req = new XMLHttpRequest();
-    
-    req.onload = function(r)  {
-      if (this.responseText) {
-        var response = JSON.parse(this.responseText);
-        for (var i = 0; i < response.data.length; i++) {
-          var img = document.createElement('div');
-          img.innerHTML = '<img src="' + response.data[i].images.preview_gif.url+ '" />';
-          
-          searchResults.appendChild(img);
-          debugger
-        }
-      }
-    }
-    
-    req.open("GET", "http://api.giphy.com/v1/gifs/search?api_key=lVXbsedbdCroLerjDV4g8AraH48d5gkr&q=" + query);
-    req.send();
-  }, 500)
-}
-
-setTimeout(function(){
-//  win.setSize(1500, 800, 500)
-  
-}, 1500)
-
+      require('./src/page.js');
     </script>
   </body>
 </html>
