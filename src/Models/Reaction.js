@@ -3,7 +3,7 @@ function Reaction(thumbnailUrl, linkUrl) {
   this.linkUrl = linkUrl;
 
   this.getHtml = function() {
-    return '<div><img src="' + this.thumbnailUrl + '" /></div>';
+    return '<img src="' + this.thumbnailUrl + '" />';
   };
 
   this.getElement = function() {
