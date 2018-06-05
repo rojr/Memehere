@@ -2,6 +2,7 @@
 let { remote } = require('electron')
 let win = remote.getCurrentWindow()
 let searchInput = document.querySelector("#main-search-input");
+const {clipboard} = require('electron')
 
 searchInput.onkeyup = function() {
 if (this.value != "" ) {
@@ -28,15 +29,12 @@ searchTimeout = setTimeout(function() {
 }, 500)
 }
 
-setTimeout(function(){
-//  win.setSize(1500, 800, 500)
-
-}, 1500);
+window.toClipboard = function(text) {
+  clipboard.writeText(text)
+}
 
 let Reaction = require('./Models/Reaction.js');
 require('./ReactionSource/ReactionSource.js');
 require('./ReactionSource/Giphy.js');
-
-debugger;
 
 window.ReactionSources.start();

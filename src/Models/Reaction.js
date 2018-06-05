@@ -7,8 +7,15 @@ function Reaction(thumbnailUrl, linkUrl) {
   };
 
   this.getElement = function() {
-    var div = document.createElement('div');
+    var div = document.createElement('div'),
+          self = this;
+
     div.innerHTML = this.getHtml();
+
+
+    div.onclick = function() {
+      window.toClipboard(self.linkUrl);
+    }
 
     return div;
   }
