@@ -13,6 +13,7 @@ window.ReactionSources.ReactionSource = source;
 
 window.ReactionSources.start = function() {
   window.ReactionSources.sources.push(new window.ReactionSources.GiphySource());
+  window.ReactionSources.sources.push(new window.ReactionSources.ImgurSource());
 }
 
 window.ReactionSources.pushReactionToTarget = function(target, reaction) {
@@ -21,11 +22,8 @@ window.ReactionSources.pushReactionToTarget = function(target, reaction) {
 
 window.ReactionSources.search = function (query) {
   for (var i = 0; i < window.ReactionSources.sources.length; i++) {
-    window.ReactionSources.sources[i].returnReactionsForQuery(query, function(reactions) {
-      for (var j = 0; j < reactions.length; j++) {
-        //TODO betterify this
-        window.ReactionSources.pushReactionToTarget(document.querySelector('#search-result-box'),reactions[j]);
-      }
+    window.ReactionSources.sources[i].returnReactionsForQuery(query, function(reaction) {
+      window.ReactionSources.pushReactionToTarget(document.querySelector('#search-result-box'),reaction);
     });
   }
 }
