@@ -3,7 +3,7 @@ function Reaction(thumbnailUrl, linkUrl) {
   this.linkUrl = linkUrl;
 
   this.getHtml = function() {
-    return '<img src="' + this.thumbnailUrl + '" />';
+    return '<img src="https://loading.io/spinners/typing/lg.-text-entering-comment-loader.gif"/>';
   };
 
   this.getElement = function() {
@@ -16,6 +16,15 @@ function Reaction(thumbnailUrl, linkUrl) {
     div.onclick = function() {
       window.toClipboard(self.linkUrl);
     }
+
+    var imageElement = div.querySelector('img');
+
+    var img = new Image();
+    img.onload = function() {
+      imageElement.src = this.src;
+    }
+
+    img.src = this.thumbnailUrl;
 
     return div;
   }

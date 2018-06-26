@@ -14,6 +14,7 @@ window.ReactionSources.ReactionSource = source;
 window.ReactionSources.start = function() {
   window.ReactionSources.sources.push(new window.ReactionSources.GiphySource());
   window.ReactionSources.sources.push(new window.ReactionSources.ImgurSource());
+  window.ReactionSources.sources.push(new window.ReactionSources.TenorSource());
 }
 
 window.ReactionSources.pushReactionToTarget = function(target, reaction) {

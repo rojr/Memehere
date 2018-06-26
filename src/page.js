@@ -33,10 +33,11 @@ window.toClipboard = function(text) {
   clipboard.writeText(text)
 }
 
-window.Config = require('./Models/Configs.js');
+require('./Models/Configs.js');
 
 require('./ReactionSource/ReactionSource.js');
 require('./ReactionSource/Giphy.js');
 require('./ReactionSource/Imgur.js');
+require('./ReactionSource/Tenor.js');
 
 window.ReactionSources.start();

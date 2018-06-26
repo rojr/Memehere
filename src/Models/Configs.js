@@ -1,14 +1,13 @@
 let storage = require('electron-json-storage');
-storage.setDataPath(process.env.HOME);
-
 
 let config = {
   "GiphyKey":'',
   'ImgurClientID':'',
-  'ImgurSecret':''
+  'ImgurSecret':'',
+  "TenorSecret":'CP6AK6Z54CKS'
 };
 
-storage.getMany(['GiphyKey', 'ImgurClientID', 'ImgurSecret'], function(error, data) {
+storage.getMany(['GiphyKey', 'ImgurClientID', 'ImgurSecret', 'TenorSecret'], function(error, data) {
   if (error) return;
 
   window.Config = data;
